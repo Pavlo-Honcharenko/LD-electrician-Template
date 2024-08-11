@@ -50,6 +50,7 @@
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
+		margin-left: auto;
 		display: block;
 		position: relative;
 		width: toRem(30);
@@ -67,7 +68,7 @@
 			position: absolute;
 			width: 100%;
 			height: toRem(2);
-			background-color: #000;
+			background-color: #fff;
 		}
 		&::before {
 			top: 0;

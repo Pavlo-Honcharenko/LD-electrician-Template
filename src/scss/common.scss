@@ -1,1 +1,27 @@
-// Заголовки, загальні БЕМ блоки та інше...
+a.button {
+	height: 50px;
+	flex: 0 1 fit-content;
+	width: fit-content;
+	border: none;
+	padding: 17px 22px; 
+	font-weight: 700;
+	line-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+a.button-yellow {
+	background-color: $yellowColor; 
+	color: #343A42 !important;
+}
+a.button-yellow:hover {
+	background-color: #DBFF5C; 
+}
+a.button-yellow:active {
+   background-color: #AADA00; 
+}
+.text-yellow {
+	color: #AADA00; 
+}

@@ -1,3 +1,56 @@
-//====================================================================================================
+.main {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
 
-//====================================================================================================
+.main__background-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+.main__bg-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background: url('@img/bg-main-pc.jpg') 0 0 / cover no-repeat;
+	z-index: -1;
+}
+
+.main__container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+	 gap: 50px;
+}
+
+.main__title {
+	font-style: italic;
+	font-weight: 800;
+	font-size: 110px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	text-align: left;
+
+	span {
+		display: block;
+	}
+}
+.main__description {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 140%;
+	color: #fff;
+}
