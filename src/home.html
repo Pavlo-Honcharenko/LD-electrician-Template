@@ -7,27 +7,76 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+
+
+
 				<!-- SECTION main -->
 				<section class="main">
 					<video class="main__background-video" autoplay muted loop>
 						<source src="@img/video-bg-pc.mp4" type="video/mp4">
 					</video>
 					<div class="main__bg-cover">
-
 					</div>
 					<div class="main__container">
-						<h1 class="main__title">
-							<span class="text-yellow">The light </span>
-							<span>comes with us</span>
-						</h1>
-						<div class="main__description">
-							We provide expertise and 
-							electrical installation for everyone
+						<div class="main__wrapper">
+							<div class="main__title">
+								<span class="text-yellow">The light </span>
+								<span>comes with us</span>
+							</div>
+							<div class="main__description">
+								We provide expertise and 
+								electrical installation for everyone
+							</div>
+							<a href="" class="button button-yellow">Order service</a>
 						</div>
-						<a href="" class="button button-yellow">Order service</a>
+					</div>
+
+					<!-- Slider wrapper -->
+					<div class="projects__slider swiper">
+						<!-- The moving part of the slider -->
+						<div class="projects__wrapper swiper-wrapper">
+							<!-- Slide -->
+							<div class="projects__slide swiper-slide">
+								<div class="swiper-slide__wrapper">
+									Bem Palace projekt
+									<a href=""><img src="@img/thumb-project-1.jpg" alt=""></a>
+								</div>
+							</div>
+							<!-- Slide -->
+							<div class="projects__slide swiper-slide">
+								<div class="swiper-slide__wrapper">
+									<a href=""><img src="@img/thumb-project-2.jpg" alt=""></a>
+								</div>
+							</div>
+							<!-- Slide -->
+							<div class="projects__slide swiper-slide">
+								<div class="swiper-slide__wrapper">
+									<a href=""><img src="@img/thumb-project-3.jpg" alt=""></a>
+								</div>
+							</div>
+							<!-- Slide -->
+							<div class="projects__slide swiper-slide">
+								<div class="swiper-slide__wrapper">
+									<a href=""><img src="@img/thumb-project-4.jpg" alt=""></a>
+								</div>
+							</div>
+							<!-- Slide -->
+							<div class="projects__slide swiper-slide">
+								<div class="swiper-slide__wrapper">
+									<a href="" class="check-all-projects">
+										Check 
+										<br>all projects
+										<img src="@img/arrow-all-projects.svg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 				<!-- End of SECTION main -->
+
+
+
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
