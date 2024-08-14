@@ -18,7 +18,7 @@ $starHeight: toRem(20);
 			@media (any-hover: hover) {
 				&:hover {
 					.rating__item {
-						background: url($starActive) 0 0 / $starWidth no-repeat;
+						background: url('@img/star-active.svg') 0 0 / $starWidth no-repeat;
 					}
 				}
 			}
@@ -30,10 +30,10 @@ $starHeight: toRem(20);
 		width: $starWidth;
 		height: $starHeight;
 		position: relative;
-		background: url($star) 0 0 / $starWidth no-repeat;
+		background: url('@img/star.svg') 0 0 / $starWidth no-repeat;
 		transition: all 0.3s;
 		&--active {
-			background: url($starActive) 0 0 / $starWidth no-repeat;
+			background: url('@img/star-active.svg') 0 0 / $starWidth no-repeat;
 		}
 		span {
 			position: absolute;
@@ -41,7 +41,7 @@ $starHeight: toRem(20);
 			left: 0;
 			width: 0%;
 			height: $starHeight;
-			background: url($starActive) 0 0 / $starWidth no-repeat;
+			background: url('@img/star-active.svg') 0 0 / $starWidth no-repeat;
 		}
 		&:not(:last-child) {
 			&::after {
@@ -61,7 +61,7 @@ $starHeight: toRem(20);
 			@media (any-hover: hover) {
 				&:hover {
 					~ .rating__item {
-						background: url($star) 0 0 / $starWidth no-repeat;
+						background: url('@img/star.svg') 0 0 / $starWidth no-repeat;
 						span {
 							display: none;
 						}

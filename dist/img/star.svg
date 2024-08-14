@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="25"
+   height="23"
+   viewBox="0 0 25 23"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="star.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="36.434783"
+     inkscape:cx="12.50179"
+     inkscape:cy="11.486277"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     d="M11.5418 0.982758C11.9937 0.136312 13.2071 0.136314 13.659 0.98276L16.761 6.79298L23.3888 7.80056C24.3735 7.95026 24.7577 9.16515 24.0381 9.85385L19.3324 14.3577L20.3807 20.7109C20.5393 21.6717 19.5477 22.4113 18.672 21.9854L12.6004 19.033L6.52883 21.9854C5.65308 22.4113 4.66153 21.6717 4.82007 20.7109L5.86839 14.3577L1.16265 9.85385C0.44309 9.16515 0.827314 7.95026 1.81202 7.80056L8.43979 6.79298L11.5418 0.982758Z"
+     fill="#AFE000"
+     id="path2" />
+  <path
+     d="M11.5418 0.982758C11.9937 0.136312 13.2071 0.136314 13.659 0.98276L16.761 6.79298L23.3888 7.80056C24.3735 7.95026 24.7577 9.16515 24.0381 9.85385L19.3324 14.3577L20.3807 20.7109C20.5393 21.6717 19.5477 22.4113 18.672 21.9854L12.6004 19.033L6.52883 21.9854C5.65308 22.4113 4.66153 21.6717 4.82007 20.7109L5.86839 14.3577L1.16265 9.85385C0.44309 9.16515 0.827314 7.95026 1.81202 7.80056L8.43979 6.79298L11.5418 0.982758Z"
+     fill="#fff"
+     id="path4"
+     style="stroke:#afe000;stroke-opacity:1;stroke-width:1.2;stroke-miterlimit:4;stroke-dasharray:none" />
+</svg>

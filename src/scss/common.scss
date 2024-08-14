@@ -1,3 +1,16 @@
+a {
+	color: #2977c1;
+	text-decoration: underline;
+}
+a:hover {
+	color: #1c568d;
+}
+a:active {
+	color: #6497c6;
+}
+.swiper a {
+	text-decoration: none;
+}
 a.button {
 	height: 50px;
 	flex: 0 1 fit-content;
@@ -11,6 +24,15 @@ a.button {
 	align-items: center;
 	cursor: pointer;
 	clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+	background: #2A313A;
+	color: #fff;
+	text-decoration: none;
+}
+a.button:hover {
+	background-color: #4A6371; 
+}
+a.button:active {
+   background-color: #394451; 
 }
 a.button-yellow {
 	background-color: $yellowColor; 
@@ -22,6 +44,45 @@ a.button-yellow:hover {
 a.button-yellow:active {
    background-color: #AADA00; 
 }
+
 .text-yellow {
 	color: #AADA00; 
+}
+.section-title {
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 100%;
+	color: #343a42;
+	border-bottom: 3px dotted #343A42;
+	margin-bottom: 40px;
+
+	@media (max-width:$mobileSmall){
+		font-size: 24px; 
+	}
+}
+.section-title-text {
+	background-color: #fff;
+	padding: 0 20px 0 0;
+	margin-bottom: -5px;
+	width: fit-content;
+}
+.section-title-white {
+	color: #fff;
+	border-bottom: 3px dotted #fff;
+
+	.section-title-text {
+		background: url('@img/bg-border-bottom.jpg') center bottom / 100% 10px no-repeat;
+	}
+}
+.popup__content {
+	padding: 0;
+	box-shadow: 0 0 120px 0 rgba(22, 38, 47, 0.4);
+	background: #e2e5ea;
+}
+.popup__close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 2;
+	outline: none;
 }

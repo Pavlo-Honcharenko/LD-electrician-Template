@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -77,7 +77,7 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+
 			// Брейкпоінти
 			breakpoints: {
 				640: {
@@ -93,12 +93,8 @@ function initSliders() {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
+
 			// Події
 			on: {
 
@@ -162,35 +158,124 @@ function initSliders() {
 			}
 		});
 	}
-}
-// Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
-function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-			const sliderScroll = new Swiper(sliderScrollItem, {
+
+	// Перевіряємо, чи є слайдер на сторінці
+	if (document.querySelector('.features__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.features__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			//autoHeight: true,
+			speed: 3000,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+			},
+			// Події
+			on: {
+
+			}
+		});
+	}
+
+	// Перевіряємо, чи є слайдер на сторінці
+	if (document.querySelector('.about-photos__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.about-photos__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			// Події
+			on: {
+
+			}
+		});
+	}
+
+	if (window.innerWidth < 992) {
+		// Перевіряємо, чи є слайдер на сторінці
+		if (document.querySelector('.testimonials__slider')) { // Вказуємо склас потрібного слайдера
+			// Створюємо слайдер
+			new Swiper('.testimonials__slider', { // Вказуємо склас потрібного слайдера
+				// Підключаємо модулі слайдера
+				// для конкретного випадку
+				modules: [Autoplay, Pagination],
 				observer: true,
 				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
-				freeMode: {
-					enabled: true,
+				slidesPerView: 1,
+				spaceBetween: 20,
+				//autoHeight: true,
+				speed: 800,
+
+				//touchRatio: 0,
+				//simulateTouch: false,
+				loop: true,
+				//preloadImages: false,
+				//lazy: true,
+
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
 				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false
+
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
 				},
-				mousewheel: {
-					releaseOnEdges: true,
+
+				// Брейкпоінти
+				breakpoints: {
+					640: {
+						slidesPerView: 1,
+						spaceBetween: 0,
+						autoHeight: true,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
 				},
+
+				// Події
+				on: {
+
+				}
 			});
-			sliderScroll.scrollbar.updateSize();
 		}
 	}
+
+
 }
+
 
 window.addEventListener("load", function (e) {
 	// Запуск ініціалізації слайдерів
