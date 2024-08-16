@@ -5,53 +5,55 @@
 	<title>Home Page</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240814214950">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240816071353">
 	<link rel="shortcut icon" href="favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<div class="header__logo">
-					<a href="/"><img src="img/logo.svg" alt=""></a>
+		<div class="header-wrapper">
+			<header class="header">
+				<div class="header__container">
+					<div class="header__logo">
+						<a href="/"><img src="img/logo.svg" alt=""></a>
+					</div>
+					<div class="menu-header">
+						<button type="button" class="menu-header__icon icon-menu"><span></span></button>
+						<nav class="menu-header__body">
+							<ul class="nav-menu">
+								<li class="menu-item current-menu-item"><a href="" data-goto="#about">About Company</a></li>
+								<li class="menu-item"><a href="" data-goto="#services">Our Services</a></li>
+								<li class="menu-item"><a href="" data-goto="#contacts">Contacts</a></li>
+							</ul>
+							<div class="languages">
+								<select name="form[]" data-class-modif="form">
+									<option value="HU" selected>HU</option>
+									<option value="EN">EN</option>
+									<option value="DE">DE</option>
+									<option value="RU">RU</option>
+								</select>
+							</div>
+							<a href="" class="button button-yellow">Get a Quote</a>
+							<div class="header-contacts">
+								<a href="tel:+36308555333">
+									<img src="img/icon-phone.svg" alt="">
+									<span>+36 (30) 855 53 33</span>
+								</a>
+								<a href="mailto:info@ldvill.com">
+									<img src="img/icon-email.svg" alt="">
+									<span>info@ldvill.com</span>
+								</a>
+								<a href="">
+									<img src="img/icon-viber.svg" alt="">
+									<span>viber</span>
+								</a>
+							</div>
+						</nav>
+					</div>
 				</div>
-				<div class="menu-header">
-					<button type="button" class="menu-header__icon icon-menu"><span></span></button>
-					<nav class="menu-header__body">
-						<ul class="nav-menu">
-							<li class="menu-item current-menu-item"><a href="">Portfolio</a></li>
-							<li class="menu-item"><a href="">Our Services</a></li>
-							<li class="menu-item"><a href="">Contacts</a></li>
-						</ul>
-						<div class="languages">
-							<select name="form[]" data-class-modif="form">
-								<option value="HU" selected>HU</option>
-								<option value="EN">EN</option>
-								<option value="DE">DE</option>
-								<option value="RU">RU</option>
-							</select>
-						</div>
-						<a href="" class="button button-yellow">Get a Quote</a>
-						<div class="header-contacts">
-							<a href="tel:+36308555333">
-								<img src="img/icon-phone.svg" alt="">
-								<span>+36 (30) 855 53 33</span>
-							</a>
-							<a href="mailto:info@ldvill.com">
-								<img src="img/icon-email.svg" alt="">
-								<span>info@ldvill.com</span>
-							</a>
-							<a href="">
-								<img src="img/icon-viber.svg" alt="">
-								<span>viber</span>
-							</a>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</header>
+			</header>
+		</div>
 		<main class="page">
 
 
@@ -61,8 +63,9 @@
 				<video class="main__background-video main__background-video--pc" autoplay muted loop>
 					<source src="img/video-bg-pc.mp4" type="video/mp4">
 				</video>
-				<video class="main__background-video main__background-video--mobile" autoplay muted loop>
+				<video class="main__background-video main__background-video--mobile" autoplay muted loop playsinline>
 					<source src="img/video-bg-mob.mp4" type="video/mp4">
+					<source src="img/video-bg-mob.webm" type="video/webm">
 				</video>
 				<div class="main__bg-cover">
 				</div>
@@ -84,6 +87,15 @@
 				<div class="projects__slider swiper">
 					<!-- The moving part of the slider -->
 					<div class="projects__wrapper swiper-wrapper">
+						<!-- Slide -->
+						<div class="projects__slide swiper-slide">
+							<div class="swiper-slide__wrapper">
+								<a href="">
+									Ferihegy Repülőtér
+									<img src="img/thumb-project-0.jpg" alt="">
+								</a>
+							</div>
+						</div>
 						<!-- Slide -->
 						<div class="projects__slide swiper-slide">
 							<div class="swiper-slide__wrapper">
@@ -123,13 +135,23 @@
 						<!-- Slide -->
 						<div class="projects__slide swiper-slide">
 							<div class="swiper-slide__wrapper">
-								<a href="" class="check-all-projects">
-									<img src="img/arrow-all-projects.svg" alt="">
+								<a href="">
+									Ferihegy Repülőtér
+									<img src="img/thumb-project-0.jpg" alt="">
 								</a>
-								<div class="check-text">
-									Check
-									<br>all projects
-								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="projects__slide check-all">
+						<div class="swiper-slide__wrapper">
+							<a href="" class="check-all-projects">
+								<img src="img/arrow-all-projects.svg" alt="">
+							</a>
+							<div class="check-text">
+								Check
+								<br>all projects
 							</div>
 						</div>
 					</div>
@@ -146,7 +168,7 @@
 					</div>
 					<div class="partners">
 						<div class="partners__partner">
-							<img src="img/logo-partner-1.svg" alt="logo">
+							<img src="img/logo-partner-1.jpg" alt="logo">
 						</div>
 						<div class="partners__partner">
 							<img src="img/logo-partner-2.svg" alt="logo">
@@ -171,7 +193,7 @@
 
 
 			<!-- SECTION ABOUT -->
-			<section class="about">
+			<section id="about" class="about">
 				<div class="about__container">
 					<div class="section-title section-title-white">
 						<div class="section-title-text">About us</div>
@@ -211,7 +233,13 @@
 					</div>
 				</div>
 
-				<div class="about-photos">
+			</section>
+			<!-- End of SECTION ABOUT -->
+
+
+			<!-- SECTION about-photos -->
+			<section class="about-photos">
+				<div class="about-photos__container">
 					<!-- Slider wrapper -->
 					<div class="about-photos__slider swiper">
 						<!-- The moving part of the slider -->
@@ -238,12 +266,12 @@
 					</div>
 				</div>
 			</section>
-			<!-- End of SECTION ABOUT -->
+			<!-- End of SECTION about -->
 
 
 
 			<!-- SECTION services -->
-			<section class="our-services">
+			<section id="services" class="our-services">
 				<div class="our-services__container">
 					<div class="section-title">
 						<div class="section-title-text">Our Services</div>
@@ -253,6 +281,7 @@
 						<br>in Electrical Installations
 					</div>
 					<div class="services">
+
 						<div class="service">
 							<div class="service__content">
 								<div class="service__image">
@@ -287,7 +316,7 @@
 							</div>
 						</div>
 
-						<div class="service">
+						<div class="service service-main">
 							<div class="service__content">
 								<div class="service__image">
 									<img src="img/icon-service-03.svg" alt="icon">
@@ -355,6 +384,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</section>
 			<!-- End of SECTION services -->
@@ -677,6 +707,8 @@
 						<div class="swiper-pagination"></div>
 					</div>
 
+					<div class="load-more"><span>Load More</span></div>
+
 				</div>
 
 			</section>
@@ -685,7 +717,7 @@
 
 
 			<!-- SECTION REQUEST -->
-			<section class="request">
+			<section id="contacts" class="request">
 				<div class="request__container">
 					<div class="request__title">
 						Do you have an electrical installation project?
@@ -784,7 +816,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240814214950"></script>
+	<script src="js/app.min.js?_v=20240816071353"></script>
 </body>
 
 </html>

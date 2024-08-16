@@ -94,6 +94,7 @@ h6 {
   min-width: 0
 }
 [class*=__container] {
+  width: 100%;
   max-width: 75rem;
   margin: 0 auto;
   padding: 0 .9375rem
@@ -259,9 +260,10 @@ a.button {
   width: -moz-fit-content;
   width: fit-content;
   border: none;
-  padding: 17px 22px;
+  padding: 33px 60px;
   font-weight: 700;
   line-height: 100%;
+  font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,6 +327,29 @@ a.button-yellow:active {
   z-index: 2;
   outline: 0
 }
+.load-more {
+  margin: 30px auto 0;
+  display: block;
+  border-bottom: 1px solid rgba(52,58,66,.937254902)
+}
+.load-more span {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 700;
+  color: #364254;
+  background-color: #fff;
+  margin: 0 auto -10px;
+  padding: 0 30px;
+  cursor: pointer
+}
+.header-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 10
+}
 .header {
   background-color: #213946;
   color: #fff;
@@ -374,6 +399,10 @@ a.button-yellow:active {
   gap: 40px;
   flex: 1 1 100%;
   height: 90px
+}
+.menu-header a.button {
+  height: 50px;
+  padding: 20px 24px
 }
 .menu-open .menu-header__body {
   z-index: 2
@@ -473,7 +502,8 @@ a.button-yellow:active {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  gap: 50px
+  gap: 50px;
+  margin-top: 90px
 }
 .main__background-video {
   position: absolute;
@@ -513,12 +543,15 @@ a.button-yellow:active {
   gap: 50px
 }
 .main__wrapper {
-  padding: 50px 0;
+  padding: 70px 0 50px;
   margin: auto 0;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  gap: 50px
+  gap: 35px
+}
+.main__wrapper .button {
+  margin-top: 15px
 }
 .main__title {
   font-style: italic;
@@ -534,14 +567,16 @@ a.button-yellow:active {
 .main__description {
   font-weight: 500;
   line-height: 140%;
-  color: #fff
+  color: #fff;
+  max-width: 666px
 }
 .main .projects__slider {
-  margin: 0 auto 8px;
+  margin: 0 0 8px 10px;
   min-width: 0;
-  width: 100%;
-  max-width: 1500px;
-  padding: 0 10px
+  width: calc(100% - 308px);
+  max-width: 1920px;
+  padding: 0 10px;
+  overflow: hidden
 }
 .projects__slide {
   width: 300px;
@@ -605,7 +640,13 @@ a.button-yellow:active {
   font-weight: 500;
   font-size: 26px;
   line-height: 100%;
-  color: #fff
+  color: #fff;
+  z-index: 5
+}
+.check-all {
+  position: absolute;
+  bottom: 8px;
+  right: 4px
 }
 .work-with__container {
   padding-top: 80px;
@@ -625,6 +666,9 @@ a.button-yellow:active {
   display: flex;
   justify-content: center;
   align-items: center
+}
+.partners__partner img {
+  width: 100%
 }
 .about {
   padding-top: 100px;
@@ -655,13 +699,15 @@ a.button-yellow:active {
   padding: 0 50px 20px
 }
 .features {
-  margin: 50px -10px 65px;
+  margin: 50px auto 65px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #c7ff00;
   -webkit-transform: rotate(-2deg);
-  transform: rotate(-2deg)
+  transform: rotate(-2deg);
+  width: 100%;
+  max-width: 1980px
 }
 .features .swiper-wrapper {
   transition-timing-function: linear
@@ -672,20 +718,22 @@ a.button-yellow:active {
   align-items: center
 }
 .features .feature {
-  padding: 20px 15px;
+  padding: 33px 15px;
   font-weight: 500;
   font-size: 33px;
   line-height: 100%;
   letter-spacing: -.01em;
   color: #213946
 }
+.about-photos .about-photos__container {
+  max-width: 100%
+}
 .about-photos__slider {
   width: 100%;
-  max-width: 1500px;
   margin: 0 auto
 }
 .about-photos__slide {
-  width: 500px;
+  width: 33vw;
   padding: 8px 4px;
   background-color: #fff
 }
@@ -724,6 +772,7 @@ a.button-yellow:active {
 }
 .service {
   height: 100%;
+  min-height: 375px;
   display: flex
 }
 .service__content {
@@ -734,7 +783,8 @@ a.button-yellow:active {
   background-color: #fff;
   width: 100%;
   flex: 0 0 100%;
-  height: 100%
+  height: 100%;
+  cursor: pointer
 }
 .service__image {
   margin-bottom: 40px
@@ -745,11 +795,12 @@ a.button-yellow:active {
 }
 .service__title {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 120%;
   color: #343a42;
   margin-bottom: 14px;
-  min-height: 77px
+  margin-top: auto;
+  min-height: 50px
 }
 .service__text {
   font-weight: 400;
@@ -757,14 +808,17 @@ a.button-yellow:active {
   line-height: 130%;
   color: #343a42
 }
-.service__content:hover .service__image--hover {
+.service-main .service__content {
+  background-color: #343a42
+}
+.service-main .service__content .service__image--hover {
   display: block
 }
-.service__content:hover .service__image {
+.service-main .service__content .service__image {
   display: none
 }
-.service__content:hover .service__text,
-.service__content:hover .service__title {
+.service-main .service__content .service__text,
+.service-main .service__content .service__title {
   color: #fff
 }
 .results {
@@ -980,7 +1034,7 @@ a.button-yellow:active {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
   background: url(../img/bg-request.png) right bottom/auto 100% no-repeat
 }
 .request__title {
@@ -998,6 +1052,9 @@ a.button-yellow:active {
   font-size: 18px;
   line-height: 160%;
   color: #2a313a
+}
+.request .button {
+  margin-top: 10px
 }
 .swiper {
   overflow: hidden
@@ -1044,6 +1101,9 @@ a.button-yellow:active {
   .bg-results .bg-results-mob {
     display: none
   }
+  .testimonials__slider {
+    width: calc(100% + 15px)
+  }
   .testimonials__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1059,9 +1119,14 @@ a.button-yellow:active {
     font-size: 2.5rem
   }
 }
-@media (max-width:1530px) {
+@media (max-width:1920px) {
   .main .projects__slider {
     max-width: 100%
+  }
+}
+@media (max-width:1520px) {
+  .about-photos__slide {
+    width: 500px
   }
 }
 @media (max-width:75em) {
@@ -1075,7 +1140,7 @@ a.button-yellow:active {
     padding: 35px
   }
   .service__title {
-    font-size: 2.7vw
+    font-size: 2.5vw
   }
   .service__text {
     font-size: 17px
@@ -1124,10 +1189,12 @@ a.button-yellow:active {
     flex: 0 0 110px
   }
 }
-@media (max-width:650px) {
-  .services {
-    grid-template-columns: repeat(1,1fr)
+@media (max-width:700px) {
+  .service {
+    min-height: 210px
   }
+}
+@media (max-width:650px) {
   .service__title {
     min-height: initial;
     font-size: 25px
@@ -1135,7 +1202,8 @@ a.button-yellow:active {
 }
 @media (max-width:600px) {
   .request__container {
-    padding-bottom: 250px
+    padding-bottom: 260px;
+    background: url(../img/bg-request-mob.png) 110% bottom/70% auto no-repeat
   }
   .request__title {
     width: 100%
@@ -1149,10 +1217,17 @@ a.button-yellow:active {
 }
 @media (max-width:20em) {
   .main__description {
-    font-size: 1.25rem
+    font-size: 1.4375rem
   }
 }
 @media (max-width:61.99875em) {
+  a.button {
+    font-size: 20px;
+    padding: 27px 45px
+  }
+  .load-more {
+    display: none
+  }
   .header {
     height: 60px
   }
@@ -1168,17 +1243,25 @@ a.button-yellow:active {
   .menu-item {
     height: 60px
   }
+  .main {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px)
+  }
   .about .about__title {
     font-size: 60px
   }
   .features .feature {
-    font-size: 29px
+    font-size: 29px;
+    padding: 30px 15px
   }
   .about-photos__slide {
     width: 350px
   }
   .our-services__title {
     font-size: 60px
+  }
+  .service {
+    min-height: 317px
   }
   .service__content {
     padding: 25px
@@ -1196,11 +1279,10 @@ a.button-yellow:active {
     height: 80px
   }
   .service__title {
-    min-height: 60px;
-    font-size: 3.3vw
+    font-size: 2.67vw
   }
   .service__text {
-    font-size: 16px
+    font-size: 15px
   }
   .results__container {
     padding-bottom: 100px
@@ -1244,8 +1326,9 @@ a.button-yellow:active {
     font-size: 60px
   }
   .request__container {
-    background: url(../img/bg-request-mob.png) right bottom/375px auto no-repeat;
-    padding-bottom: 200px
+    gap: 40px;
+    background: url(../img/bg-request-mob.png) right bottom/365px auto no-repeat;
+    padding-bottom: 220px
   }
   .request__title {
     width: 90%;
@@ -1322,6 +1405,10 @@ a.button-yellow:active {
     bottom: calc(50% - .0625rem);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
+  }
+  a.button {
+    font-size: 16px;
+    padding: 22px 34px
   }
   .header {
     height: 50px
@@ -1413,8 +1500,16 @@ a.button-yellow:active {
   .footer__nav-link img {
     height: 18px
   }
+  .main {
+    margin-top: 50px;
+    min-height: calc(100vh - 50px)
+  }
   .main__title {
-    font-size: 10vw
+    font-size: 13vw
+  }
+  .main .projects__slider {
+    width: calc(100% - 188px);
+    margin: 0 0 8px
   }
   .projects__slide {
     width: 180px;
@@ -1443,7 +1538,8 @@ a.button-yellow:active {
     width: 100%
   }
   .features .feature {
-    font-size: 25px
+    font-size: 25px;
+    padding: 22px 15px
   }
   .our-services__container {
     padding-bottom: 100px
@@ -1452,7 +1548,7 @@ a.button-yellow:active {
     font-size: 55px
   }
   .services {
-    grid-template-columns: repeat(2,1fr)
+    grid-template-columns: repeat(1,1fr)
   }
   .service__title {
     min-height: 40px;
@@ -1460,6 +1556,9 @@ a.button-yellow:active {
   }
   .service__text {
     font-size: 15px
+  }
+  .service:nth-child(3) {
+    order: -1
   }
   .results__title {
     font-size: 55px
@@ -1510,8 +1609,13 @@ a.button-yellow:active {
   .footer__nav-link img {
     height: 15px
   }
+  .main__wrapper .button {
+    width: 100%;
+    flex: 0 0 100%
+  }
   .main__title {
-    font-size: 12vw
+    width: 90%;
+    font-size: 16vw
   }
   .partners {
     margin: 0 -15px;
@@ -1533,14 +1637,20 @@ a.button-yellow:active {
   .our-services__title {
     font-size: 48px
   }
+  .service__image {
+    margin-bottom: 20px
+  }
   .service__image img {
-    height: 60px
+    height: 70px
+  }
+  .service__image--hover {
+    margin-bottom: 20px
   }
   .service__image--hover img {
-    height: 60px
+    height: 70px
   }
   .service__title {
-    font-size: 20px
+    font-size: 22px
   }
   .service__text {
     font-size: 14px
@@ -1575,14 +1685,14 @@ a.button-yellow:active {
   }
 }
 @media (min-width:20em)and (max-width:75em) {
-  @supports (font-size:clamp(1.25rem ,0.7954545455rem + 2.2727272727vw ,2.5rem)) {
+  @supports (font-size:clamp(1.4375rem ,1.0511363636rem + 1.9318181818vw ,2.5rem)) {
     .main__description {
-      font-size: clamp(1.25rem ,.7954545455rem + 2.2727272727vw ,2.5rem)
+      font-size: clamp(1.4375rem ,1.0511363636rem + 1.9318181818vw ,2.5rem)
     }
   }
-  @supports not (font-size:clamp(1.25rem ,0.7954545455rem + 2.2727272727vw ,2.5rem)) {
+  @supports not (font-size:clamp(1.4375rem ,1.0511363636rem + 1.9318181818vw ,2.5rem)) {
     .main__description {
-      font-size: calc(1.25rem + 1.25*(100vw - 20rem)/ 55)
+      font-size: calc(1.4375rem + 1.0625*(100vw - 20rem)/ 55)
     }
   }
 }
@@ -1605,8 +1715,5 @@ a.button-yellow:active {
     cursor: pointer;
     -webkit-transform: scale(1.13);
     transform: scale(1.13)
-  }
-  .service__content:hover {
-    background-color: #343a42
   }
 }

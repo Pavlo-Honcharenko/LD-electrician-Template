@@ -106,6 +106,7 @@ body {
 	// Чуйна
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
+			width: 100%;
 			max-width: toRem($containerWidth);
 			margin: 0 auto;
 		}

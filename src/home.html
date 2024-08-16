@@ -15,8 +15,9 @@
 					<video class="main__background-video main__background-video--pc" autoplay muted loop>
 						<source src="@img/video-bg-pc.mp4" type="video/mp4">
 					</video>
-					<video class="main__background-video main__background-video--mobile" autoplay muted loop>
+					<video class="main__background-video main__background-video--mobile" autoplay muted loop playsinline>
 						<source src="@img/video-bg-mob.mp4" type="video/mp4">
+						<source src="@img/video-bg-mob.webm" type="video/webm">
 					</video>
 					<div class="main__bg-cover">
 					</div>
@@ -38,6 +39,15 @@
 					<div class="projects__slider swiper">
 						<!-- The moving part of the slider -->
 						<div class="projects__wrapper swiper-wrapper">
+							<!-- Slide -->
+							<div class="projects__slide swiper-slide">
+								<div class="swiper-slide__wrapper">
+									<a href="">
+										Ferihegy Repülőtér
+										<img src="@img/thumb-project-0.jpg" alt="">
+									</a>
+								</div>
+							</div>
 							<!-- Slide -->
 							<div class="projects__slide swiper-slide">
 								<div class="swiper-slide__wrapper">
@@ -77,13 +87,23 @@
 							<!-- Slide -->
 							<div class="projects__slide swiper-slide">
 								<div class="swiper-slide__wrapper">
-									<a href="" class="check-all-projects">
-										<img src="@img/arrow-all-projects.svg" alt="">
+									<a href="">
+										Ferihegy Repülőtér
+										<img src="@img/thumb-project-0.jpg" alt="">
 									</a>
-									<div class="check-text">
-										Check 
-										<br>all projects
-									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="projects__slide check-all">
+							<div class="swiper-slide__wrapper">
+								<a href="" class="check-all-projects">
+									<img src="@img/arrow-all-projects.svg" alt="">
+								</a>
+								<div class="check-text">
+									Check 
+									<br>all projects
 								</div>
 							</div>
 						</div>
@@ -100,7 +120,7 @@
 						</div>
 						<div class="partners">
 							<div class="partners__partner">
-								<img src="@img/logo-partner-1.svg" alt="logo">
+								<img src="@img/logo-partner-1.jpg" alt="logo">
 							</div>
 							<div class="partners__partner">
 								<img src="@img/logo-partner-2.svg" alt="logo">
@@ -125,7 +145,7 @@
 
 
 				<!-- SECTION ABOUT -->
-				<section class="about">
+				<section id="about" class="about">
 					<div class="about__container">
 						<div class="section-title section-title-white">
 							<div class="section-title-text">About us</div>
@@ -165,39 +185,45 @@
 						</div>
 					</div>
 
-					<div class="about-photos">
-						<!-- Slider wrapper -->
-						<div class="about-photos__slider swiper">
-							<!-- The moving part of the slider -->
-							<div class="about-photos__wrapper swiper-wrapper">
-								<!-- Slide -->
-								<div class="about-photos__slide swiper-slide">
-									<div class="about-photos__wprapper">
-										<img src="@img/image-01.jpg" alt="photo">
-									</div>
-								</div>
-								<!-- Slide -->
-								<div class="about-photos__slide swiper-slide">
-									<div class="about-photos__wprapper">
-										<img src="@img/image-02.jpg" alt="photo">
-									</div>
-								</div>
-								<!-- Slide -->
-								<div class="about-photos__slide swiper-slide">
-									<div class="about-photos__wprapper">
-										<img src="@img/image-03.jpg" alt="photo">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</section>
 				<!-- End of SECTION ABOUT -->
 
 
+				<!-- SECTION about-photos -->
+						<section class="about-photos">
+							<div class="about-photos__container">
+								<!-- Slider wrapper -->
+								<div class="about-photos__slider swiper">
+									<!-- The moving part of the slider -->
+									<div class="about-photos__wrapper swiper-wrapper">
+										<!-- Slide -->
+										<div class="about-photos__slide swiper-slide">
+											<div class="about-photos__wprapper">
+												<img src="@img/image-01.jpg" alt="photo">
+											</div>
+										</div>
+										<!-- Slide -->
+										<div class="about-photos__slide swiper-slide">
+											<div class="about-photos__wprapper">
+												<img src="@img/image-02.jpg" alt="photo">
+											</div>
+										</div>
+										<!-- Slide -->
+										<div class="about-photos__slide swiper-slide">
+											<div class="about-photos__wprapper">
+												<img src="@img/image-03.jpg" alt="photo">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+				<!-- End of SECTION about -->
+
+
 
 				<!-- SECTION services -->
-				<section class="our-services">
+				<section id="services" class="our-services">
 					<div class="our-services__container">
 						<div class="section-title">
 							<div class="section-title-text">Our Services</div>
@@ -207,6 +233,7 @@
 							<br>in Electrical Installations
 						</div>
 						<div class="services">
+
 							<div class="service">
 								<div class="service__content">
 									<div class="service__image">
@@ -241,7 +268,7 @@
 								</div>
 							</div>
 
-							<div class="service">
+							<div class="service service-main">
 								<div class="service__content">
 									<div class="service__image">
 										<img src="@img/icon-service-03.svg" alt="icon">
@@ -309,6 +336,7 @@
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</section>
 				<!-- End of SECTION services -->
@@ -630,6 +658,8 @@
 							<div class="swiper-pagination"></div>
 						</div>
 
+						<div class="load-more"><span>Load More</span></div>
+
 					</div>
 
 				</section>
@@ -638,7 +668,7 @@
 
 
 				<!-- SECTION REQUEST -->
-				<section class="request">
+				<section id="contacts" class="request">
 					<div class="request__container">
 						<div class="request__title">
 							Do you have an electrical installation project?

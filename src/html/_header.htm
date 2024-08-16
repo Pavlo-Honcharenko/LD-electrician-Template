@@ -1,40 +1,42 @@
-<header class="header">
-	<div class="header__container">
-		<div class="header__logo">
-			<a href="/"><img src="@img/logo.svg" alt=""></a>
+<div class="header-wrapper">
+	<header class="header">
+		<div class="header__container">
+			<div class="header__logo">
+				<a href="/"><img src="@img/logo.svg" alt=""></a>
+			</div>
+			<div class="menu-header">
+				<button type="button" class="menu-header__icon icon-menu"><span></span></button>
+				<nav class="menu-header__body">
+					<ul class="nav-menu">
+						<li class="menu-item current-menu-item"><a href="" data-goto="#about">About Company</a></li>
+						<li class="menu-item"><a href="" data-goto="#services">Our Services</a></li>
+						<li class="menu-item"><a href="" data-goto="#contacts">Contacts</a></li>
+					</ul>
+					<div class="languages">
+						<select name="form[]" data-class-modif="form">
+							<option value="HU" selected>HU</option>
+							<option value="EN">EN</option>
+							<option value="DE">DE</option>
+							<option value="RU">RU</option>
+						</select>
+					</div>
+					<a href="" class="button button-yellow">Get a Quote</a>
+					<div class="header-contacts">
+						<a href="tel:+36308555333">
+							<img src="@img/icon-phone.svg" alt="">
+							<span>+36 (30) 855 53 33</span>
+						</a>
+						<a href="mailto:info@ldvill.com">
+							<img src="@img/icon-email.svg" alt="">
+							<span>info@ldvill.com</span>
+						</a>
+						<a href="">
+							<img src="@img/icon-viber.svg" alt="">
+							<span>viber</span>
+						</a>
+					</div>
+				</nav>
+			</div>
 		</div>
-		<div class="menu-header">
-			<button type="button" class="menu-header__icon icon-menu"><span></span></button>
-			<nav class="menu-header__body">
-				<ul class="nav-menu">
-					<li class="menu-item current-menu-item"><a href="">Portfolio</a></li>
-					<li class="menu-item"><a href="">Our Services</a></li>
-					<li class="menu-item"><a href="">Contacts</a></li>
-				</ul>
-				<div class="languages">
-					<select name="form[]" data-class-modif="form">
-						<option value="HU" selected>HU</option>
-						<option value="EN">EN</option>
-						<option value="DE">DE</option>
-						<option value="RU">RU</option>
-					</select>
-				</div>
-				<a href="" class="button button-yellow">Get a Quote</a>
-				<div class="header-contacts">
-					<a href="tel:+36308555333">
-						<img src="@img/icon-phone.svg" alt="">
-						<span>+36 (30) 855 53 33</span>
-					</a>
-					<a href="mailto:info@ldvill.com">
-						<img src="@img/icon-email.svg" alt="">
-						<span>info@ldvill.com</span>
-					</a>
-					<a href="">
-						<img src="@img/icon-viber.svg" alt="">
-						<span>viber</span>
-					</a>
-				</div>
-			</nav>
-		</div>
-	</div>
-</header>
+	</header>
+</div>
