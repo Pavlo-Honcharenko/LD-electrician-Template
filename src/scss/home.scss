@@ -517,8 +517,11 @@
 		min-height: 317px;
 	}
 
+	@media (max-width:$mobile){
+		min-height: 255px;
+	}
 	@media (max-width: 700px){
-		min-height: 210px;
+		min-height: 210px !important;
 	}
 
 	// .service__content
