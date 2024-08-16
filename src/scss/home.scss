@@ -597,14 +597,7 @@
 			}
 			@media (max-width:$mobile){
 				min-height: 40px;
-				font-size: 4vw;
-			}
-			@media (max-width: 650px){
-				  min-height: initial;
-				  font-size: 25px;
-			}
-			@media (max-width:$mobileSmall){
-				 font-size: 22px; 
+				font-size: 25px;
 			}
 		}
 		// .service__text
