@@ -82,8 +82,11 @@ a.button-yellow:active {
 	border-bottom: 3px dotted #fff;
 
 	.section-title-text {
-		background: url('@img/bg-border-bottom.jpg') center bottom / 100% 10px no-repeat;
+		background: url('@img/border.jpg') center bottom / 100% 10px no-repeat;
 	}
+}
+.about .section-title-white .section-title-text {
+  background: url('@img/bg-border-bottom.jpg') center bottom/100% 10px no-repeat
 }
 .popup__content {
 	padding: 0;

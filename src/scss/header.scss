@@ -200,7 +200,19 @@
 }
 
 .current-menu-item, .current-menu-item a {
-	color: $yellowColor;
+
+	@media (max-width:$mobile){
+		color: $yellowColor; 
+	}
+
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 		&::after {
+	// 			content:'';
+	// 			display: none; 
+	// 		}
+	// 	}
+	// }
 }
 
 .languages {

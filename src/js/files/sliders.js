@@ -199,7 +199,7 @@ function initSliders() {
 			modules: [Autoplay],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 'auto',
+			slidesPerView: 1.75,
 			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 800,
@@ -211,9 +211,22 @@ function initSliders() {
 			//lazy: true,
 
 			autoplay: {
-				delay: 5000,
+				delay: 4000,
 				disableOnInteraction: false,
 			},
+
+			// Брейкпоінти
+			breakpoints: {
+				600: {
+					slidesPerView: 2.75,
+					spaceBetween: 0,
+				},
+				1400: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+			},
+
 			// Події
 			on: {
 
