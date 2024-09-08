@@ -1612,5 +1612,131 @@ a.button:hover {
 }
 
 
+.projects-main {
+	background: url('@img/bg-our-projects-main.jpg') center center / cover no-repeat;
+	min-height: initial;
+
+	@media (max-width:$tablet){
+		background: url('@img/bg-our-projects-main-mobile.jpg') center center / cover no-repeat; 
+	}
+
+	.main__description {
+		font-size: 20px;
+		line-height: 150%;
+		margin-bottom: 30px;
+
+		@media (max-width:$tablet){
+			font-size: 18px;
+		}
+		@media (max-width:$mobile){
+			font-size: 17px; 
+		}
+		@media (max-width:$mobileSmall){
+			font-size: 15px; 
+		}
+	}
+}
+
+.our-projects {
+		// .our-projects__container
+		&__container {
+			padding-top: 100px;
+			padding-bottom: 100px;
+
+			@media (max-width:$tablet){
+				padding-top: 80px;
+				padding-bottom: 80px;
+			}
+
+			@media (max-width:$mobile){
+				 padding-top: 60px;
+				 padding-bottom: 60px; 
+			}
+		}
+}
+.our-project {
+	display: flex;
+	margin-bottom: 40px;
+
+	@media (max-width:$mobile){
+		 display: block; 
+	}
+	
+	&:not(:last-child) {
+		padding-bottom: 40px;
+		border-bottom: 3px dotted #343a4230;
+	}
+		// .our-project__col
+		&__col {
+			flex: 0 1 50%;
+			// .our-project__col--text
+			&--text {
+				order: 1;
+				padding: 0 55px 0 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 40px;
+
+				@media (max-width:$tablet){
+					padding: 0 25px 0 0;
+					gap: 35px;
+				}
+				@media (max-width:$mobile){
+					 gap: 30px; 
+				}
+			}
+			// .our-project__col--image
+			&--image {
+				order: 2;
+
+				@media (max-width:$mobile){
+					margin-bottom: 30px; 
+				}
+				
+				img {
+					width: 100%;
+				}
+			}
+		}
+		// .our-project__year
+		&__year {
+			font-weight: 700;
+			font-size: 50px;
+			line-height: 100%;
+			letter-spacing: -0.04em;
+			color: #b1de11;
+
+			@media (max-width:$mobile){
+				 font-size: 40px; 
+			}
+		}
+		// .our-project__title
+		&__title {
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 120%;
+			color: #343a42;
+
+			@media (max-width:$mobile){
+				 font-size: 24px; 
+			}
+		}
+		// .our-project__text
+		&__text {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 160%;
+			color: #15191f;
+
+			@media (max-width:$mobile){
+				 font-size: 15px; 
+			}
+
+			@media (max-width:$mobileSmall){
+				 font-size: 14px; 
+			}
+		}
+}
 
 
