@@ -68,7 +68,7 @@
 }
 
 .main__wrapper {
-	padding: 70px 0 50px;
+	padding: 70px 0;
 	margin: auto 0;
 	display: flex;
 	justify-content: flex-end;
@@ -114,8 +114,12 @@
 	font-weight: 500;
 	line-height: 140%;
 	color: #fff;
-	max-width: 666px;
+	max-width: 70%;
 	@include adaptiveValue("font-size", 40, 23);
+
+	@media (max-width:$mobileSmall){
+		 max-width: 90%; 
+	}
 }
 .main .projects__slider {
 	margin: 0 0 8px 10px;
@@ -1297,7 +1301,7 @@ a.button:hover {
 .main.about-main {
 	background: url('@img/bg-about-main.jpg') center center / cover no-repeat;
 
-	@media (max-width:$mobile){
+	@media (max-width:$tablet){
 		background: url('@img/bg-about-main-mobile.jpg') center center / cover no-repeat; 
 	}
 		
@@ -1316,21 +1320,11 @@ a.button:hover {
 		}
 	}
 }
-.main__quote {
-	font-size: 17px;
-	line-height: 150%;
-
-	@media (max-width:$mobile){
-		font-size: 16px; 
-	}
-	@media (max-width:$mobileSmall){
-		font-size: 15px; 
-	}
-}
 
 .main__subtitle {
 	color: #FFF;
 	overflow: hidden;
+	margin-top: 7vh;
 	
 	span {
 		padding: 0 20px 0 0;
@@ -1372,6 +1366,74 @@ a.button:hover {
 		}
 	}
 }
+.our-mission {
+		display: flex;
+		gap: 50px;
+
+		@media (max-width:$tablet){
+			display: block;
+		}
+		// .our-mission__col
+		&__col {
+			// .our-mission__col--1
+			&--1 {
+				display: flex;
+				gap: 30px;
+				align-items: flex-start;
+				flex: 0 1 70%;
+
+				img {
+					width: 33px;
+					margin-top: 6px;
+				}
+			}
+			// .our-mission__col--2
+			&--2 {
+				display: flex;
+				align-items: center;
+				gap: 30px;
+
+				@media (max-width:$tablet){
+					padding-top: 40px;
+				}
+
+				img {
+					width: 140px;
+				}
+			}
+		}
+		// .our-mission__person-info
+		&__person-info {}
+		// .our-mission__name
+		&__name {
+			font-weight: 600;
+			font-size: 32px;
+			line-height: 100%;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		// .our-mission__speciality
+		&__speciality {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 120%;
+			text-transform: uppercase;
+			color: #fff;
+		}
+}
+.main__quote {
+	font-size: 17px;
+	line-height: 150%;
+	font-weight: 500;
+
+	@media (max-width:$mobile){
+		font-size: 16px; 
+	}
+	@media (max-width:$mobileSmall){
+		font-size: 15px; 
+	}
+}
+
 
 
 

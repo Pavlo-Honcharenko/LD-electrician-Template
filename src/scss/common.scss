@@ -121,3 +121,45 @@ a.button-yellow:active {
 		display: none;
 	}
 }
+
+
+
+
+
+
+.breadcrumbs {
+
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			&:not(:last-child) {
+				
+				&::after {
+					content:'';
+					display: block;
+					width: 24px;
+					height: 24px;
+					background: url('@img/icon-arrow-white.svg') center center no-repeat;
+				}
+			}
+		}
+	}
+
+	.home-link {
+		width: 24px;
+		height: 24px;
+		background: url('@img/icon-home-white.svg') 0 0 no-repeat;
+		@media (any-hover: hover) {
+			&:hover {
+				background: url('@img/icon-home-yellow.svg') 0 0 no-repeat;
+			}
+		}
+	}
+}
+
