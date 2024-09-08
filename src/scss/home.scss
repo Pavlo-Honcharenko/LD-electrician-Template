@@ -1500,6 +1500,10 @@ a.button:hover {
 			flex: 0 1 50%;
 			&--image {
 				order: 2;
+				overflow: hidden;
+				@media (max-width: 1100px) {
+					flex: 0 1 55%;
+				}
 
 				img {
 					min-width: 100%;
@@ -1512,6 +1516,9 @@ a.button:hover {
 				display: flex;
 				flex-direction: column;
 				gap: 40px;
+				@media (max-width: 1100px) {
+					flex: 0 1 45%;
+				}
 
 				@media (max-width:$tablet){
 					padding: 40px;
@@ -1532,6 +1539,12 @@ a.button:hover {
 			}
 			// .our-service__image--mob
 			&--mob {
+				min-width: initial !important;
+				width: 100%;
+				max-width: 670px;
+				display: block;
+				margin: 0 auto;
+
 				@media (min-width:$tablet){
 					display: none; 
 				}
@@ -1572,6 +1585,10 @@ a.button:hover {
 			color: #343a42;
 			padding-bottom: 40px;
 			border-bottom: 3px dotted #343a4230;
+
+			@media (max-width: 1200px){
+				font-size: 16px;
+			}
 
 			@media (max-width:$mobileSmall){
 				font-size: 14px; 
