@@ -103,18 +103,31 @@ a.button-yellow:active {
 .load-more {
 	margin: 30px auto 0;
 	display: block;
-	border-bottom: 1px solid #343a42ef;
+	border-bottom: 1px solid #343a4234;
 
+	@media (any-hover: hover) {
+		&:hover {
+			border-bottom: 1px solid #343a4244;
+		}
+	}
+	
 	span {
 		display: block;
 		width: fit-content;
 		font-size: 20px;
 		font-weight: 700;
-		color:#364254;
+		color: #36425470;
 		background-color: #fff;
 		margin: 0 auto -10px;
-		padding: 0 30px;
+		padding: 0 40px;
 		cursor: pointer;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #364254;
+			}
+		}
+
 	}
 
 	@media (max-width:$tablet){

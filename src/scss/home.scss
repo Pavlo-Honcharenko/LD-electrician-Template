@@ -123,7 +123,7 @@
 .main .projects__slider {
 	margin: auto 0 8px 10px;
 	min-width: 0;
-	width: calc(100% - 314px);
+	width: calc(100% - 318px);
 	padding: 0 10px;
 	overflow: hidden;
 	z-index: 1;
@@ -488,7 +488,7 @@
 			font-style: italic;
 			font-weight: 800;
 			font-size: 80px;
-			line-height: 100%;
+			line-height: 110%;
 			letter-spacing: -0.03em;
 			color: #343a42;
 			padding-top: 20px;
@@ -497,10 +497,13 @@
 				font-size: 60px;
 			}
 			@media (max-width:$mobile){
-				 font-size: 55px; 
+				font-size: 50px; 
 			}
 			@media (max-width:$mobileSmall){
-				 font-size: 48px; 
+				font-size: 43px; 
+			}
+			@media (max-width:$mobileXS){
+				font-size: 39px; 
 			}
 		}
 }
@@ -1740,3 +1743,39 @@ a.button:hover {
 }
 
 
+.our-values {
+	.our-services__title {
+		max-width: 1085px;
+		@media (max-width:$tablet){
+			max-width: 950px;
+		}
+	}
+	.services {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+
+		@media (max-width:$mobile){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+
+.main.main-projects {
+	min-height: initial;
+	padding-top: 8px;
+
+	.projects__slide .swiper-slide__wrapper a.check-all-projects {
+		backdrop-filter: initial;
+		background: #fff;
+		border: 2px solid #343A42;
+		color: #343A42;
+	}
+	.projects__slide .swiper-slide__wrapper .check-text {
+		color: #343A42;
+	}
+	.projects__slide .swiper-slide__wrapper a.check-all-projects img {
+		z-index: 1;
+	}
+}
