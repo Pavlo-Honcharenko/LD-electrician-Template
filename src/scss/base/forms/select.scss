@@ -9,13 +9,28 @@
 	}
 	// .select__title
 	&__title {
-		color: inherit;
-		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
-		cursor: pointer;
+		background: rgba(35, 81, 105, 0.05);
+		border-bottom: 2px solid rgba(52, 58, 66, 0.1);
+		padding: 24px;
+		font-weight: 500;
+		font-size: 20px;
 		width: 100%;
-		border-radius: 4px;
+		line-height: 120%;
+		color: #343a42;
+		outline: none; 
+		text-align: left;
+		@include adaptiveValue("font-size", 20, 14);
+
+		@media (max-width:$mobile){
+			padding: 20px; 
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #F7FCE8;
+				border-bottom: 2px solid #d7ed89;
+			}
+		}
 	}
 	// .select__value
 	&__value {
@@ -23,7 +38,6 @@
 		min-width: 0;
 		align-items: center;
 		height: toRem(30);
-		padding: 0 toRem(15);
 		gap: toRem(10);
 		> * {
 			flex: 1 1 auto;
@@ -31,11 +45,12 @@
 		&:after {
 			content: "";
 			align-self: stretch;
-			flex: 0 0 10px;
+			flex: 0 0 18px;
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background: url('@img/arrow-select-black.svg') center center no-repeat;
 			._select-open & {
 				transform: rotate(-180deg);
 			}
@@ -85,7 +100,7 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 		// Максимальна висота
-		max-height: toRem(200);
+		max-height: toRem(300);
 		// Стилі скроллбару
 		.simplebar-scrollbar {
 			&::before {
@@ -98,14 +113,25 @@
 		width: 100%;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 24px 20px;
 		color: inherit;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 100%;
+		@include adaptiveValue("font-size", 20, 14);
+
+		@media (max-width:$mobile){
+			 padding: 18px 20px; 
+		}
+
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				// color: #c7ff00;
+				background-color: #F7FCE8;
+				border-bottom: 2px solid #d7ed89;
 			}
 		}
 	}

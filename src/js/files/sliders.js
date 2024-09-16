@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -37,7 +37,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 8,
 			//autoHeight: true,
 			speed: 800,
 
@@ -285,6 +285,65 @@ function initSliders() {
 			});
 		}
 	}
+
+	// Перевіряємо, чи є слайдер на сторінці
+	if (document.querySelector('.years__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.years__slider', { // Вказуємо склас потрібного слайдера
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 8,
+			speed: 800,
+			centeredSlides: true,
+			loop: false,
+			initialSlide: 2,
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next',
+			},
+
+			// autoplay: {
+			// 	delay: 1000,
+			// 	disableOnInteraction: false,
+			// },
+
+
+			// Брейкпоінти
+			// breakpoints: {
+			// 	640: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 0,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 0,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 0,
+			// 	},
+			// 	// 1268: {
+			// 	// 	slidesPerView: 4.9,
+			// 	// 	spaceBetween: 0,
+			// 	// },
+			// 	1500: {
+			// 		slidesPerView: 5,
+			// 		spaceBetween: 0,
+			// 	},
+			// },
+
+			// Події
+			on: {
+
+			}
+		});
+	}
+
+
 
 
 }

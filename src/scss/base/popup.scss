@@ -59,3 +59,53 @@ body::after {
 		visibility: visible;
 	}
 }
+
+
+
+#request {
+	backdrop-filter: blur(40px);
+	background: rgba(31, 77, 102, 0.5);
+
+	.popup__content {
+		border-radius: 2px;
+		max-width: 1340px;
+		height: 92vh;
+		background: url('@img/bg-popup.jpg') center center / cover no-repeat;
+		overflow: auto;
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+		@include adaptiveValue("padding-left", 70, 10);
+		@include adaptiveValue("padding-right", 70, 10);
+	}
+
+	.send-request__title, .send-request__description, input, textarea, select, input::placeholder, textarea::placeholder, .select__title, .select__option {
+		color: #fff;
+	}
+	input, textarea, select, .select__title {
+		cursor: default;
+		background: rgba(255, 255, 255, 0.05);
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.05);
+				cursor: default;
+			}
+		}
+	}
+	.select__value:after {
+		background: url('@img/arrow-select-white.svg') center center no-repeat;
+	}
+	.select__options {
+		background-color: #2C5265;
+	}
+	.select__option {
+		border-bottom: 2px dotted rgba(255, 255, 255, 0.212);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #C7FF00;
+				background-color: #2C5265;
+			}
+		}
+	}
+
+}

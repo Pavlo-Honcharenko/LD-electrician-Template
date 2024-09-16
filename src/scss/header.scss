@@ -181,38 +181,29 @@
 			a {
 				color: $yellowColor;
 			}
-			&::after {
-				content:'';
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 100%;	
-				height: 4px;
-				background-color: $yellowColor;
-
-				@media (max-width:$mobile){
-					display: none; 
-				}
-			}
 		}
 	}
-
 }
 
-.current-menu-item, .current-menu-item a {
+.current-menu-item {
 
-	@media (max-width:$mobile){
-		color: $yellowColor; 
+	color: $yellowColor;
+	a {
+		color: $yellowColor;
 	}
+	&::after {
+		content:'';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;	
+		height: 4px;
+		background-color: $yellowColor;
 
-	// @media (any-hover: hover) {
-	// 	&:hover {
-	// 		&::after {
-	// 			content:'';
-	// 			display: none; 
-	// 		}
-	// 	}
-	// }
+		@media (max-width:$mobile){
+			display: none; 
+		}
+	}
 }
 
 .languages {

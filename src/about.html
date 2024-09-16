@@ -5,7 +5,7 @@
 	})
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			@@include('html/_header-about.htm',{})
 			<main class="site-main page">
 
 
@@ -131,24 +131,110 @@
 
 
 				<!-- SECTION RESULTS -->
-				<section class="results">
-					<img class="bg-cover" src="@img/bg-main-pc.jpg" alt="">
-					<div class="results__container">
+				<section class="our-history">
+					<div class="our-history__container">
 						<div class="section-title section-title-white">
 							<div class="section-title-text">Road map</div>
 						</div>
 
-						<div class="results__content">
-							<div class="results__title">
-								Our History
+						<div class="our-history__title">
+							Our History
+						</div>
+
+						<!-- Slider wrapper -->
+						<div class="years__slider swiper">
+							<!-- The moving part of the slider -->
+							<div class="years__wrapper swiper-wrapper">
+								<!-- Slide -->
+								<div class="years__slide swiper-slide">
+									<span>2008</span>
+								</div>
+								<!-- Slide -->
+								<div class="years__slide swiper-slide">
+									<a href=""><span>2010</span></a>
+								</div>
+								<!-- Slide -->
+								<div class="years__slide swiper-slide">
+									<a href=""><span>2014</span></a>
+								</div>
+								<!-- Slide -->
+								<div class="years__slide swiper-slide">
+									<a href=""><span>2020</span></a>
+								</div>
+								<!-- Slide -->
+								<div class="years__slide swiper-slide">
+									<a href=""><span>2022</span></a>
+								</div>
+								<!-- Slide -->
+								<div class="years__slide swiper-slide">
+									<a href=""><span>2023</span></a>
+								</div>
 							</div>
 
-							
+							<!-- If you need buttons for navigation (left/right) -->
+							<button type="button" class="swiper-button-prev"></button>
+							<button type="button" class="swiper-button-next"></button>
 						</div>
+						<!-- End of Slider wrapper -->
+
+
+						<div class="our-history__subtitle">Years of expert solutions</div>
+						
+						<div class="our-history__text">
+							TMM Projects is committed to building strong, meaningful relationships with communities and industry to further build capacity within ʔamakʔ is Ktunaxa, Ktunaxa Territory. TMM Projects is dedicated to deliver training and employment opportunities for Ktunaxa and First Nations people in a holistic, distinct manner, utilizing local resources and businesses affiliated with our company.
+						</div>
+						
 					
 					</div>
 				</section>
 				<!-- End of SECTION RESULTS -->
+
+
+
+
+				<!-- SECTION TEAM -->
+				<section class="team">
+					<div class="team__container">
+						<div class="section-title">
+							<div class="section-title-text">Team</div>
+						</div>
+						<div class="team__title">
+							Meet our Team
+						</div>
+
+						<div class="team-items">
+							<div class="team-item width-25">
+								<div class="team-image-wrapper">
+									<img src="@img/team-1.jpg" alt="">
+									<div class="team-info">
+										<div class="team-info__name">
+											Mondi Laszlo
+										</div>
+										<div class="team-info__speciality">
+											CEO IN L&D VILL
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="team-item width-75">
+								<div class="team-image-wrapper">
+									<img src="@img/team-2.jpg" alt="">
+								</div>
+							</div>
+							<div class="team-item width-50">
+								<div class="team-image-wrapper">
+									<img src="@img/team-3.jpg" alt="">
+								</div>
+							</div>
+							<div class="team-item width-50">
+								<div class="team-image-wrapper">
+									<img src="@img/team-4.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End of SECTION TEAM -->
 
 
 
@@ -242,7 +328,7 @@
 						<div class="request__text">
 							Please fill in the form about your project and our managers will call  or write you back in a few hours to discuss it in more details
 						</div>
-						<a href="" class="button">Send a Request</a>
+						<div data-popup="#request" class="button">Send a Request</div>
 					</div>
 				</section>
 				<!-- End of SECTION REQUEST -->

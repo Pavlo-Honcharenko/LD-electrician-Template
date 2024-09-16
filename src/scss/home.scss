@@ -196,6 +196,24 @@
 				}
 			}
 		}
+		.check-text {
+			position: absolute;
+			top: 18px;
+			left: 18px;
+			font-weight: 500;
+			font-size: 26px;
+			line-height: 100%;
+			color: #fff;
+			z-index: 5;
+			cursor: pointer;
+			pointer-events: none;
+
+			@media (max-width:$mobile){
+				font-size: 16px; 
+				top: 10px;
+				left: 10px;
+			}
+		}
 		a.check-all-projects {
 			display: block;
 			width: calc(100% - 6px);
@@ -221,6 +239,8 @@
 
 			@media (any-hover: hover) {
 				&:hover {
+					border: 2px solid #C7FF00;
+					color: #C7FF00;
 
 					img {
 						cursor: pointer;
@@ -228,25 +248,6 @@
 					}
 					
 				}
-			}
-		}
-
-		.check-text {
-			position: absolute;
-			top: 18px;
-			left: 18px;
-			font-weight: 500;
-			font-size: 26px;
-			line-height: 100%;
-			color: #fff;
-			z-index: 5;
-			cursor: pointer;
-			pointer-events: none;
-
-			@media (max-width:$mobile){
-				font-size: 16px; 
-				top: 10px;
-				left: 10px;
 			}
 		}
 
@@ -1777,5 +1778,626 @@ a.button:hover {
 	}
 	.projects__slide .swiper-slide__wrapper a.check-all-projects img {
 		z-index: 1;
+	}
+}
+
+.check-all {
+	a.check-all-projects img:last-child {
+		display: none !important;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			a.check-all-projects img:first-child {
+				display: none !important;
+			}
+			a.check-all-projects img:last-child {
+				display: block !important;
+			}
+
+			.check-text {
+				color: #C7FF00;
+			}
+
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
+//============================================YEARS SLIDER===========================================================
+
+.years {
+		// .years__slider
+		&__slider {
+		}
+		// .years__wrapper
+		&__wrapper {}
+		// .years__slide
+		&__slide {
+			flex: 0 0 300px;
+			height: 125px;
+			position: relative;
+
+			@media (max-width:$tablet){
+				flex: 0 0 250px;
+				height: 105px;
+			}
+
+			@media (max-width:$mobile){
+				flex: 0 0 220px;
+				height: 90px;
+			}
+
+			@media (max-width:$mobileSmall){
+				flex: 0 0 200px;
+				height: 85px;
+			}
+			
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				font-weight: 700;
+				font-size: 50px;
+				line-height: 100%;
+				letter-spacing: -0.04em;
+				color: #fff;
+			}
+			span {
+				position: absolute;
+				left: -12px;
+				height: 100%;
+				width: calc(100% + 24px);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: 700;
+				font-size: 50px;
+				line-height: 100%;
+				letter-spacing: -0.04em;
+				color: #fff;
+				background-color: #2C4E60;
+				clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+				@media (max-width:$tablet){
+					font-size: 40px;
+				}
+				@media (max-width:$mobile){
+					 font-size: 35px; 
+				}
+				@media (max-width:$mobileSmall){
+					font-size: 30px; 
+				}
+			}
+		}
+}
+.years__slide > span {
+	opacity: 0.3;
+}
+.years__slider.swiper {
+	overflow: visible;
+	position: relative;
+	padding-bottom: 35px;
+	margin-bottom: 35px;
+}
+.years__slider {
+	.swiper-button-prev {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 62px;
+		height: 11px;
+		background: url('@img/icon-arrow-big-white.svg') center center / cover no-repeat;
+		transform: rotate(-180deg);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: url('@img/icon-arrow-big-yellow.svg') center center / cover no-repeat;
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	.swiper-button-next {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: block;
+		width: 62px;
+		height: 11px;
+		background: url('@img/icon-arrow-big-white.svg') center center / cover no-repeat;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: url('@img/icon-arrow-big-yellow.svg') center center / cover no-repeat;
+			}
+		}
+	}
+}
+
+.years__slide.swiper-slide.swiper-slide-active {
+	a {
+		color: #343A42;
+	}
+	span {
+		color: #343A42;
+		background-color: #C7FF00;
+	}
+}
+
+.our-history {
+	min-height: 82vh;
+	background: url('@img/bg-our-history.jpg') center bottom / cover no-repeat;
+
+	@media (max-width:$mobileSmall){
+		background: url('@img/bg-our-history-mobile.jpg') center bottom / cover no-repeat;  
+	}
+}
+.our-history__container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	@media (max-width:$mobile){
+		padding-top: 60px; 
+	}
+}
+
+.our-history__title {
+	font-style: italic;
+	font-weight: 800;
+	font-size: 80px;
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	color: #fff;
+	margin-bottom: 75px;
+
+	@media (max-width:$tablet){
+		font-size: 60px;
+		margin-bottom: 70px;
+	}
+
+	@media (max-width:$mobile){
+		 font-size: 54px; 
+		margin-bottom: 65px;
+	}
+
+	@media (max-width:$mobileSmall){
+		font-size: 48px; 
+		margin-bottom: 50px;
+	}
+}
+
+.our-history__subtitle {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 120%;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 16px;
+
+	@media (max-width:$tablet){
+		font-size: 36px;
+	}
+	@media (max-width:$mobile){
+		font-size: 34px;
+	}
+	@media (max-width:$mobileSmall){
+		font-size: 30px;
+	}
+}
+
+.our-history__text {
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 160%;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 170px;
+
+	@media (max-width:$mobile){
+		font-size: 16px; 
+	}
+	@media (max-width:$mobileSmall){
+		font-size: 15px;
+	}
+}
+
+
+//===============================================TEAM========================================================
+
+.team {
+	background-color: #EDF0F4;
+	// .team__container
+	&__container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	// .team__title
+	&__title {
+		font-style: italic;
+		font-weight: 800;
+		font-size: 80px;
+		line-height: 100%;
+		letter-spacing: -0.03em;
+		color: #343a42;
+		margin-bottom: 75px;
+
+		@media (max-width:$tablet){
+			font-size: 60px;
+			margin-bottom: 70px;
+		}
+
+		@media (max-width:$mobile){
+			font-size: 54px; 
+			margin-bottom: 65px;
+		}
+
+		@media (max-width:$mobileSmall){
+			font-size: 48px; 
+			margin-bottom: 50px;
+		}
+	}
+	.section-title {
+	}
+	.section-title-text {
+	}
+}
+
+.team-items {
+	margin: 0 -8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	@media (max-width: 600px){
+		display: block;
+	}
+}
+.team-item {
+	position: relative;
+	padding-bottom: 31.2%;
+
+	@media (max-width:$mobile){
+		padding-bottom: 36%;
+	}
+	@media (max-width: 600px){
+		padding-bottom: initial;
+	}
+
+	.team-image-wrapper {
+		position: absolute;
+		left: 8px;
+		top: 8px;
+		width: calc(100% - 16px);
+		height: calc(100% - 16px);
+		overflow: hidden;
+		border-radius: 6px;
+
+		@media (max-width: 600px){
+			position: relative;
+			left: initial;
+			top: initial;
+			width: 100%;
+			height: initial;
+			min-height: 230px;
+			margin-bottom: 16px;
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		
+		@media (max-width: 600px){
+			min-height: 230px;
+		}
+	}
+}
+.team-info {
+	position: absolute;
+	left: 20px;
+	bottom: 16px;
+	width: 100%;
+	background: url('@img/bg-team-info.png') 0 0 / auto 100% no-repeat;
+	padding: 22px 24px 18px 27px;
+
+	@media (max-width:$tablet){
+		padding: 16px 22px 12px 25px;
+	}
+	@media (max-width:$mobile){
+		padding: 14px 20px 10px 22px;
+	}
+	@media (max-width: 600px){
+		padding: 22px 24px 18px 27px;
+		left: 60px;
+	}
+	// .team-info__name
+	&__name {
+		font-weight: 700;
+		font-size: 17px;
+		line-height: 120%;
+		color: #343a42;
+		margin-bottom: 4px;
+	}
+	// .eam-info__speciality
+	&__speciality {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 120%;
+		color: #343a42;
+	}
+}
+
+.width-25 {
+	flex: 0 0 25%;
+	@media (max-width:$mobile){
+		flex: 0 0 35%;
+	}
+	@media (max-width: 600px){
+		flex: 0 0 100%;
+	}
+}
+.width-50 {
+	flex: 0 0 50%;
+	@media (max-width: 600px){
+		flex: 0 0 100%;
+	}
+}
+.width-75 {
+	flex: 0 0 75%;
+	@media (max-width:$mobile){
+		flex: 0 0 65%;
+	}
+	@media (max-width: 600px){
+		flex: 0 0 100%;
+	}
+}
+
+
+
+//============================================CONTACTS===========================================================
+
+
+
+
+
+.contacts-main {
+	background: url('@img/bg-contacts.jpg') 0 0 / cover no-repeat;
+	min-height: initial;
+
+	.main__description {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 150%;
+		margin-bottom: 80px;
+		@include adaptiveValue("font-size", 20, 15);
+	}
+
+	.main__wrapper {
+		@media (max-width:$mobile){
+			 padding-bottom: 0;
+			 margin-bottom: 0; 
+		}
+	}
+}
+
+.contacts-info {
+	background-color: #2C4E60;
+
+		// .contacts-info__container
+		&__container {
+			padding-top: 100px;
+			padding-bottom: 100px;
+			position: relative;
+
+			@media (max-width:$mobile){
+				 padding-top: 60px;
+				 padding-bottom: 0; 
+			}
+
+			.contacts-info__map {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				height: 100%;
+				width: 50vw;
+
+				@media (max-width:$mobile){
+					position: relative;
+					top: initial;
+					left: initial;
+					margin: 0 -15px;
+					width: calc(100% + 30px); 
+					height: 70vh;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+		}
+		// .contacts-info__content
+		&__content {
+			width: 45%;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			background-color: #2C4E60;
+
+			@media (max-width:$mobile){
+				 width: 100%;
+				 padding-bottom: 60px; 
+			}
+		}
+		// .contacts-info__item
+		&__item {
+			display: flex;
+			gap: 11px;
+			align-items: flex-start;
+			
+			img {
+				margin-top: 7px;
+				width: 30px;
+				height: 30px;
+
+				@media (max-width:$tablet){
+					width: 26px;
+					height: 26px;
+				}
+				@media (max-width:$mobile){
+					 width: 24px;
+					 height: 24px; 
+				}
+				@media (max-width:$mobileSmall){
+					 width: 20px;
+					 height: 20px; 
+				}
+			}
+
+			span {
+				font-weight: 400;
+				line-height: 130%;
+				text-decoration: underline;
+				color: #fff;
+				@include adaptiveValue("font-size", 28, 17);
+
+				@media (any-hover: hover) {
+					&:hover {
+						color: #C4FA04;
+					}
+				}
+			}
+		}
+		// .contacts-info__decor
+		&__decor {
+			width: 100%;
+			max-width: 450px;
+			overflow: hidden;
+			img {
+				width: 100%;
+			}
+		}
+}
+.contacts-info__item--address span {
+	text-decoration: initial;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+
+
+
+//=======================================================================================================
+
+.send-request {
+	background-color: #fff;
+		// .send-request__container
+		&__container {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+		// .send-request__row
+		&__row {
+			display: flex;
+
+			@media (max-width:$mobile){
+				 display: block; 
+			}
+		}
+		// .send-request__col
+		&__col {
+			flex: 0 1 50%;
+
+			@media (max-width:$mobile){
+				 width: 100%; 
+			}
+		}
+		// .send-request__title
+		&__title {
+			font-style: italic;
+			font-weight: 800;
+			font-size: 80px;
+			line-height: 100%;
+			letter-spacing: -0.03em;
+			color: #343a42;
+			margin-bottom: 60px;
+			padding-right: 15%;
+			@include adaptiveValue("font-size", 76, 42);
+
+			@media (max-width:$mobile){
+				 margin-bottom: 50px; 
+				 padding-right: 0;
+			}
+		}
+		// .send-request__description
+		&__description {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 160%;
+			color: #2a313a;
+			padding-right: 15%;
+			@include adaptiveValue("font-size", 18, 14);
+
+			@media (max-width:$mobile){
+				 margin-bottom: 40px; 
+				 padding-right: 0;
+			}
+		}
+}
+.send-reques-form {
+	.button {
+		margin-top: 40px;
+	}
+	.button-yellow {
+	}
+}
+.form-line {
+	margin-bottom: 8px;
+}
+input, textarea, select {
+	background: rgba(35, 81, 105, 0.05);
+	border-bottom: 2px solid rgba(52, 58, 66, 0.1);
+	padding: 24px;
+	font-weight: 500;
+	font-size: 20px;
+	width: 100%;
+	line-height: 120%;
+	color: #343a42;
+	outline: none; 
+	@include adaptiveValue("font-size", 20, 14);
+
+	@media (max-width:$mobile){
+		 padding: 20px; 
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #F7FCE8;
+			border-bottom: 2px solid #d7ed89;
+		}
+	}
+}
+input::placeholder, textarea::placeholder {
+  color: black;
+}
+.send-request__row .button {
+	min-width: 150px;
+	@media (max-width:$mobileSmall){
+		width: 100%; 
+		clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 	}
 }
